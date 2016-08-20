@@ -1,0 +1,12 @@
+public class Test{
+	public static void main(String[] args){
+		int a=23;
+		double b=1.45;
+		char c='G';
+		String d="I love study.";
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);//怎么在每个输出结果前加上八个空格？
+	}
+}
