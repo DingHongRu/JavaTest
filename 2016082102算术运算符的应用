@@ -1,0 +1,15 @@
+public class Test{
+	public static void main(String[] args){
+		int java=90;
+		int sql=60;
+		int stb=89;
+		int AA=java-sql;
+		int sum=java+sql+stb;
+		double avg=sum/3;
+		System.out.println("java和sql的分数之差："+AA);
+		System.out.println("平均分："+avg);
+/*  "+" 1.连接符（非数值与非数值，非数值与数值）
+	2.算术运算符（数值与数值）
+*/
+	}
+}
