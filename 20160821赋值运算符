@@ -1,0 +1,15 @@
+public class Test{
+	public static void main(String[] args){
+		String brand="品牌：爱国者F234";
+		String weight="重量：";
+		double weight1=12.4;
+		String type="电池类型：内置锂电池";
+		String price1="价格:";
+		int price=23;
+		System.out.println(brand);
+		System.out.print(weight);
+		System.out.println(weight1);
+		System.out.println(type);
+		System.out.print(price1);System.out.print(price);
+	}
+}
