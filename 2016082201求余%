@@ -1,0 +1,9 @@
+public class T{
+	public static void main(String[] args){
+		int days=46;
+		double week=days/7;
+		System.out.println("有"+week+"周");
+		int days1=days%7;
+		System.out.println("剩"+days1+"天");
+	}
+}
