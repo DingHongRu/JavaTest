@@ -2,7 +2,7 @@ public class T{
 	public static void main(String[] args){
 		int year=20;
 		double f=9.8;
-		int Newyear=year+(int)f;//()内为强制转换的类型
+		int Newyear=year+(int)f;//()内为强制转换的类型，Stirng不能转换成char
 		System.out.println(Newyear);
 	}
 }
