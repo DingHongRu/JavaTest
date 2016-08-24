@@ -1,0 +1,17 @@
+public class T{
+	public static void main(String[] args){
+		int A=15;
+		int B=15;
+		boolean flag;
+		flag=A==B;//falg=A!=B
+		System.out.println(flag);//true,false
+	}
+}
+/*
+>= 大于或恒等于
+<= 小于或恒等于
+>  大于
+<  小于
+!= 不等于
+== 恒等于
+*/
