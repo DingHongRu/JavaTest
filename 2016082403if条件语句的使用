@@ -1,0 +1,13 @@
+import java.util.*;//导入了java.util包里所有的语言，包括Scanner
+public class T
+{
+	public static void main(String[] args){
+		Scanner in=new Scanner(System.in);
+		System.out.println("请输入你的成绩：");
+		int score=in.nextInt();
+		if(score>90==false){//分数小于90，如果分数大于90也可以用[if(score>90)]表示
+			System.out.println("奖励你一根棒棒糖");
+		}
+		System.out.println("正在测试");
+	}
+}
