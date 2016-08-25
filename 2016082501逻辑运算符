@@ -1,0 +1,19 @@
+import java.util.*;
+public class T
+{
+	public static void main(String[] args){
+		Scanner in=new Scanner(System.in);
+		System.out.println("请输入你的Java成绩：");
+		int Java=in.nextInt();
+		System.out.println("请输入你的SQL成绩：");
+		int SQL=in.nextInt();
+		if(!(Java>90)&&SQL>90){
+/*小括号可以确定运算的优先级；
+(Java>90)结果是true,!(Java>90)结果是false,SQL>90结果是true;
+逻辑运算符只能对boolean类型进行操作;
+*/
+			System.out.println("奖励你一根棒棒糖");
+		}
+		System.out.println("测试");
+	}
+}
