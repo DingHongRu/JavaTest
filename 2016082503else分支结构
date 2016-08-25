@@ -1,0 +1,13 @@
+import java.util.*;
+public class T{
+	public static void main(String[] args){
+		System.out.println("请输入你的Java成绩：");
+		Scanner in=new Scanner(System.in);
+		double Java=in.nextDouble();
+		if(Java>=90){
+			System.out.println("奖励你一根棒棒糖");
+		}else{
+			System.out.println("面壁思过");
+		}
+	}
+}
