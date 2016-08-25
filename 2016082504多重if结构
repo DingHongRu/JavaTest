@@ -1,0 +1,29 @@
+import java.util.*;
+public class T{
+	public static void main(String[] args){
+		System.out.println("请输入你的Java成绩：");
+		Scanner in=new Scanner(System.in);
+		double Java=in.nextDouble();
+		/*if(Java>=90){
+			System.out.println("A");
+		}if(Java>=80&&Java<90){
+			System.out.println("B");
+		}if(Java>=70&&Java<80){
+			System.out.println("C");
+		}if(Java>=60&&Java<70){
+			System.out.println("D");
+		}
+		*/
+		if(Java>=90){
+			System.out.println("成绩：A");
+		}else if(Java>=80){
+			System.out.println("成绩：B");
+		}else if(Java>=70){
+			System.out.println("成绩：C");
+		}else{
+			System.out.println("U can 狗带!");
+		//执行完判断后就直接跳出判断，执行下一段程序
+		}
+		System.out.println("Dame it!");
+	}
+}
