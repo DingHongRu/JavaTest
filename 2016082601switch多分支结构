@@ -1,0 +1,38 @@
+import java.util.*;
+public class T{
+	public static void main(String[] args){
+		Scanner in=new Scanner(System.in);
+		System.out.println("请输入你的名次：");
+		int mingci=in.nextInt();
+		/*
+		if(mingci==1){
+			System.out.println("武林盟主");
+		}
+		if(mingci==2){
+			System.out.println("武当掌门");
+		}
+		if(mingci==3){
+			System.out.println("峨嵋掌门");
+		}
+		if(mingci>3){
+			System.out.println("逐出师门");
+		}
+		*/
+		switch(mingci){//switch开关，()内只支持int,char数据类型
+			case 1://case案例的个数可以随意定义但后面一定要跟常量
+			System.out.println("武林盟主");
+			break;//跳出
+
+			case 2:
+			System.out.println("武当掌门");
+			break;
+
+			case 3:
+			System.out.println("峨嵋掌门");
+			break;
+			
+			default://默认
+			System.out.println("逐出师门");
+		}
+	}
+}
