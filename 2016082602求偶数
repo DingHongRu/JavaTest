@@ -7,7 +7,6 @@ public class T{
 		int number=in.nextInt();
 		if(number==0){
 			System.out.println("请输入一个非零的正整数");
-
 		}else{
 			if(number%2==0){
 				System.out.println(number+"是一个偶数");
