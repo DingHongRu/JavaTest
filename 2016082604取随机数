@@ -1,0 +1,28 @@
+/*
+import java.util.Random;
+public class T{
+	public static void main(String[] args){
+		Random xx=new Random();
+		int number=xx.nextInt(10);//随机数个数为10个，范围：0~9
+		System.out.println("随机数为："+number);
+	}
+}
+*/
+public class T{
+	public static void main(String[] args){
+		int number=(int)(Math.random()*10);
+		System.out.println("随机数为："+number);
+	}
+}
+/*可以支持多线程
+每个正在系统上运行的 程序都是一个 进程。每个 进程包含一到多个线程。
+进程也可能是整个 程序或者是部分程序的动态执行。
+线程是一组 指令的集合，或者是 程序的特殊段，它可以在程序里独立执行。
+也可以把它理解为 代码运行的上下文。
+所以线程基本上是轻量级的 进程，它负责在单个 程序里执行多任务。
+通常由 操作系统负责多个线程的调度和执行。
+线程是 程序中一个单一的顺序控制流程.在单个程序中同时运行多个线程完成不同的工作,称为多线程.
+线程和 进程的区别在于,子进程和 父进程有不同的代码和数据空间,而多个线程则共享数据空间,
+每个线程有自己的执行 堆栈和 程序计数器为其执行上下文.多线程主要是为了节约CPU时间,
+发挥利用,根据具体 情况而定. 线程的运行中需要使用计算机的 内存资源和CPU。
+*/
