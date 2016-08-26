@@ -1,0 +1,18 @@
+/*
+求：用户输入一个年份，然后告诉用户这是瑞年还是平年
+此年能被4整除&&不能被100整除||能被400整除       的年份为瑞年
+*/
+import java.util.*;
+public class T{
+	public static void main(String[] args){
+		Scanner in=new Scanner(System.in);
+		System.out.println("请输入年份：");
+		int year=in.nextInt();
+		if(year%4==0&&year%100!=0||year%400==0){
+			System.out.println(year+"是闰年");
+
+		}else{
+			System.out.println(year+"是平年");
+		}
+	}
+}
