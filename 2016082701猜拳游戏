@@ -9,7 +9,7 @@ public class T{
 		String Marks="拳头";//这就是个标记
 		String Marks2="拳头";//这就是个标记
 		switch(person){
-			case 1:
+			case 1://容易将：写成；
 			Marks="剪刀";
 			break;
 			case 2:
@@ -31,7 +31,7 @@ public class T{
 			break;
 		}
 		if(person==computer){
-			System.out.println("你出的是："+Marks+"\t电脑出的是："+Marks2+"\t^_^平局");
+			System.out.println("你出的是："+Marks+"\t电脑出的是："+Marks2+"\t^_^平局");//输入双引号时容易忘记切换成英文输入法
 		}else if(person==1&&computer==2||person==2&&computer==3||person==3&&computer==1){
 			System.out.println("你出的是："+Marks+"\t电脑出的是："+Marks2+"\t—_—！你输了");
 		}else{
