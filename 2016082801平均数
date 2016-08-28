@@ -1,0 +1,18 @@
+import java.util.*;
+public class T{
+	public static void main(String[] args){
+		Scanner in=new Scanner(System.in);
+		System.out.println("请输入学生人数：");
+		int person=in.nextInt();
+		int i=1;
+		int sum=0;
+		while(i<=person){
+			System.out.println("请输入第"+i+"位学员的成绩：");
+			int a=in.nextInt();
+			sum=sum+a;
+			i++;
+		}//在循环里面声明的变量是局部变量，仅在循环里面有意义;循环体里面不要声明在循环体外要使用的变量
+		int avg=sum/person;
+		System.out.println(person+"个人的平均分为："+avg);
+	}
+}
