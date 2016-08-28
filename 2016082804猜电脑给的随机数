@@ -1,0 +1,31 @@
+import java.util.*;
+public class T{
+	public static void main(String[] args){
+		Scanner in=new Scanner(System.in);
+		Random MyRandom=new Random();
+		int A=MyRandom.nextInt(101);
+		int number;//声明变量
+		do{
+			System.out.println("Guess what the number is?");
+			number=in.nextInt();//重新赋值，只有赋值后才能访问、调用该变量
+			if(number<A){
+				System.out.println("small");
+			}else if(number>A){
+				System.out.println("big");
+			}
+		}while(number!=A);
+		/*
+		//do-while循环结构是先操作再判断，而while先判断再执行，因此在执行while循环结构时要先对变量赋值
+		//因此在执行下面这段程序时，会提醒“没有初始化变量”
+		while(number!=A){
+			System.out.println("Guess what the number is?");
+				number=in.nextInt();//重新赋值，只有赋值后才能访问、调用该变量
+				if(number<A){
+					System.out.println("small");
+				}else if(number>A){
+					System.out.println("big");
+		}
+		*/
+		System.out.println("Yeah!You get it!");
+	}
+}
