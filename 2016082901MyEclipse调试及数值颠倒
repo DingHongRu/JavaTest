@@ -1,0 +1,14 @@
+import java.util.*;
+public class Test3 {
+	public static void main(String[] args){
+		System.out.println("请输入一个整数：");
+		Scanner in=new Scanner(System.in);
+		int number=in.nextInt();
+		while(number!=0){
+			int values=number%10;
+			System.out.print(values);
+			number=number/10;//整型与整形数据相处得到的还是整形数据；如果把10换成10.1就会发生自动强制转换
+		}
+		System.out.println("\n数值被颠倒");
+	}
+}
