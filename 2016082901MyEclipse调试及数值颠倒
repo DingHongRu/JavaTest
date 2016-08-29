@@ -7,7 +7,8 @@ public class Test3 {
 		while(number!=0){
 			int values=number%10;
 			System.out.print(values);
-			number=number/10;//整型与整形数据相处得到的还是整形数据；如果把10换成10.1就会发生自动强制转换
+			number=number/10;
+			//整型与整形数据相处得到的还是整形数据；如果把10换成10.1就会发生自动类型转换，将（number/10）转换成double类型
 		}
 		System.out.println("\n数值被颠倒");
 	}
