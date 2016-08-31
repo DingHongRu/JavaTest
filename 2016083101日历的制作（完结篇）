@@ -13,8 +13,8 @@ public class Test{
 			}else{
 				sum+=365;
 			}
-		}
-		for(int i=1;i<month;i++){//原来的代码是：i<=month
+		}//此循环结构实现从1900年1月1日到（某年-1）年最后一天的总天数
+		for(int i=1;i<month;i++){//原来的代码是：i<=month时，出现错误
 			if(i==2){
 				if(year%4==0&&year%100!=0||year%400==0)	{
 					sum+=29;
@@ -29,12 +29,12 @@ public class Test{
 				}
 			}
 		}
-		sum+=1;
+		sum+=1;//此循环结构实现从1900到某一年某一月第一天总共多少天的计算
 		int weekday=sum%7;
 		System.out.println("日\t一\t二\t三\t四\t五\t六");
 		for(int i=1;i<=weekday;i++){
 			System.out.print("\t");
-		}
+		}//此循环结构实现每个月第一天星期几的调整
 		int day=0;
 		if(month==2){
 			if(year%4==0&&year%100!=0||year%400==0)	{
@@ -48,13 +48,13 @@ public class Test{
 			}else{
 				day=31;
 			}
-		}
+		}//此条件结构实现每个月天数的控制
 		for(int i=1;i<=day;i++){
 			if(sum%7==6){
 				System.out.print(i+"\n");
 			}else{
 				System.out.print(i+"\t");
-			}
+			}//此循环结构实现日历的格式转换
 			sum++;
 		}
 	}
