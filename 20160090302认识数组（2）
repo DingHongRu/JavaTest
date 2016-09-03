@@ -1,0 +1,6 @@
+public class T{
+	public static void main(String[] args){
+		int[] arr={23,45,76};
+		System.out.println(arr[2]);//如果访问[3]，就会出现数组下标溢出的错误
+	}
+}
