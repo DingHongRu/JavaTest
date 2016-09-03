@@ -1,0 +1,24 @@
+public class T{
+	public static void main(String[] args){
+		int[] arr;
+		arr=new int[5];
+		arr[0]=1;
+		arr[1]=2;
+		arr[2]=3;
+		arr[3]=4;
+		arr[4]=5;
+		System.out.println(arr[2]);
+	}
+}
+/*
+掌握数组（是一个变量，存储一组相同类型的数据）的基础用法：
+- 如何声明数组：int[]a;
+- 如何分配空间：a=new int[5];
+- 如何赋值：a[0]=8;
+- 处理数据：a[0]=a[0]*10;
+
+会应用数组解决简单的问题：
+- 求平均值，
+- 求最大值，最小值，
+- 排序
+*/
