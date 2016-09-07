@@ -46,6 +46,8 @@ public class T{
 		/*
 		 * 排名
 		 * */
+		/*
+		*数组的冒泡排列
 		for(int i=0;i<renshu-1;i++){
 			for(int j=0;j<renshu-1;j++){
 				if(sum[j]<sum[j+1]){
@@ -56,8 +58,20 @@ public class T{
 			}
 			
 		}
-
+		*/
+		//数组的选择排列
+		for(int i=0;i<renshu-1;i++){
+			for(int j=i+1;j<renshu;j++){
+				if(sum[i]>sum[j]){
+					int t=sum[i];		String t2=str[i];
+					sum[i]=sum[j];		str[i]=str[j];
+					sum[j]=t;		str[j]=t2;
+				}
+			}
+		}
 		
+
+
 		/*
 		 * 效果输出
 		 * */
