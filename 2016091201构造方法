@@ -1,0 +1,29 @@
+class Cat{
+	private String name;
+	private int age;
+	Cat(String name,int age){
+		this.name=name;
+		this.age=age;
+		System.out.println("Name:"+name+"\tAge:"+age);
+	}
+	
+	Cat(){
+	/*java编译器增加一个构造方法，能调用到，
+	但不会执行任何操作，只是创建了一个对象;
+	方法可以重载，但是变量名字不能一样
+	*/
+	}
+	void get(){
+		System.out.println("Name:"+this.name+"\tAge:"+this.age);
+	}
+
+}
+public class T{
+	public static void main(String[] args){
+		Cat one=new Cat("Finch",1);
+		Cat two=new Cat();
+		one.get();
+		two.get();
+		
+	}
+}
