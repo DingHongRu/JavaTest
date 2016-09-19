@@ -28,14 +28,14 @@ public class Admin {//用来管理学生的一个类
 		int i=this.setIndex(arr);
 		stu.setOn(i);
 		if(i==99999){
-			System.out.println("学生人数以到最大，不能再添加了");
+			System.out.println("学生人数已到定义人数上限，不能再添加了");
 		}else{
 			arr[i]=stu;
 		}
 		this.print(arr);
 	}
 	public int setIndex(Student[] arr){//返回数组里面为空的下标
-		for(int i=0;i<arr.length;i++){
+		for(int i=1;i<=arr.length;i++){//学员的编号从1开始
 			if(arr[i]==null){
 				return i;
 			}
@@ -100,7 +100,7 @@ public class Admin {//用来管理学生的一个类
 			}
 		}
 	}
-	public void courseSort(int num,Student[] arr){//根据指定的科目进行排序操作
+	public void courseSort(int num,Student[] arr){//根据指定的科目进行排序操作；用的是选择排序法，冒泡法容易出现bug
 		if(num==1){
 			for(int i=0;i<arr.length-1;i++){
 				for(int j=i+1;j<arr.length;j++){
