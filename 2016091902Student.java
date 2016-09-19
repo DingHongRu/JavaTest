@@ -8,14 +8,15 @@ public class Student {//学生类
 	private int html;
 	private int sql;
 	private int sum;
-	private int avg;
+	private double avg;
 	
-	public void setOn(int on){
-		this.on=on;
-	}
 	public int getOn(){
 		return this.on;
 	}
+	public void setOn(int on){
+		this.on=on;
+	}
+
 	public String getName() {
 		return this.name;
 	}
@@ -55,13 +56,20 @@ public class Student {//学生类
 	public int getSum() {
 		return sum;
 	}
-	public void setSum(int sum) {
+	public void setSum() {
+	/*不能在再声明一遍int sum
+	*无法将类 Student中的方法 setSum应用到给定类型;
+	*/
 		this.sum=this.java+this.sql+this.html+this.c_shar;
 	}
-	public int getAvg() {
+	public double getAvg() {
 		return avg;
 	}
-	public int setAvg(int avg) {
+	public void setAvg() {
+	/*
+	*不能将void打错；错误: 缺少返回语句
+	*不能在再声明一遍int avg；错误: 无法将类 Student中的方法 setAvg应用到给定类型;
+	*/
 		this.avg =this.sum/4;
 	}
 	public String toString(){
