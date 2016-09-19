@@ -1,0 +1,27 @@
+public class A6_32{
+	public static void main(String[] args){
+		Person A=new Person();
+		System.out.println(A.country);
+		Person B=new Person("xiaoli");
+		System.out.println(B.country);
+	}
+}
+/*
+作用：给对象进行初始化
+特点：对象一建立就运行，而且优先于构造函数执行
+构造方法和构造代码块的区别：前者是给对应的对象进行初始化；后者是给所有的对象进行统一的初始化
+构造代码块是给不同对象共性的内容进行初始化
+*/
+class Person{
+	String name;
+	String country;
+	Person(){
+		System.out.println("我是无参构造方法");
+	}
+	Person(String name){
+		System.out.println("我是有参构造方法");
+	}
+	{
+		country="China";
+	}
+}
