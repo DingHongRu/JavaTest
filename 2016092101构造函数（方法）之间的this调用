@@ -1,0 +1,70 @@
+/*
+this用来区分局部变量和成员变量同名的情况；
+this代表本类对象，代表他所在函数（方法）所属对象的引用
+构造函数之间的调用只能通过this语句完成；
+构造函数之间调用时，this语句只能出现在第一行（必须是构造器中的第一个语句），初始化优先执行；
+如果初始化中还有初始化，那就先执行更细节的初始化
+*/
+public class A6_33{
+	public static void main(String[] args){
+		Student S=new Student("jiji",32);
+		Student B=new Student("koko");
+	}
+}
+
+class Student{
+	String name;
+	int age;
+	Student(){
+		System.out.println("无参构造函数");
+	}
+	Student(String name){
+		this();//this(变量)
+		this.name=name;
+		System.out.println(this.name);
+	}
+	Student(String name,int age){
+		this(name);//
+		this.name=name;
+		this.age=age;
+		System.out.println(this.name);
+		System.out.println(this.age);
+	}
+}
+	/*
+	运行结果：
+	无参构造函数
+	jiji
+	jiji
+	32
+	无参构造函数
+	koko
+	*/
+
+
+	/*
+	A6_33.java:30: 错误: 对于println(String,int), 找不到合适的方法
+                System.out.println("lp",0);
+                          ^
+    方法 PrintStream.println()不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(boolean)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(char)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(int)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(long)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(float)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(double)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(char[])不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(String)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(Object)不适用
+      (实际参数列表和形式参数列表长度不同)
+2 个错误
+	*/
