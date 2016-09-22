@@ -1,0 +1,62 @@
+/*
+Data数据区：方法区，共享区
+
+static关键字（用于共享同一份数据）
+作用：是一个修饰符，用于修饰成员（包括成员变量，成员方法）
+1.被static修饰后的成员变量只有一份，所有的方法只访问数据区的那一份数据
+2.当成员被static修饰后，多了一种访问方式，除了可以被对象调用外，还可以被类名直接调用（类名.静态成员）
+
+static的特点：
+1.被static修饰的成员变量随着类的加载而被加载
+2.被static修饰的成员变量优先于对象的存在
+3.被static修饰的成员的数据被所有对象所共享
+4.被static修饰的成员变量可以被类名直接调用
+
+存放位置：
+类变量随着类的加载而存在于data内存区
+实例变量随着对象的建立而存在于堆内存
+
+生命周期：
+类变量生命周期最长，随着类的消失而消失；
+实例变量的生命比类变量短
+
+方法注意事项：
+1.静态的方法只能访问静态的成员
+2.非静态的方法能既访问静态的成员（成员变量，成员方法），也能访问非静态的成员；
+	前两条的原因是：“被static修饰的成员变量优先于对象的存在”的特点决定的
+
+3.在class里面的才是成员变量，在方法的括号里面是局部变量（不能被static修饰的）；
+4.静态的方法中不能定义this super关键字（因为静态优先于对象存在）
+*/
+public class A6_34{
+	public static void main(String[] args){
+		Student A=new Student();
+		A.country="China";
+		System.out.println(A.country);
+		/*
+		A.country();
+
+		错误: 找不到符号
+                A.country();
+                 ^
+  		符号:   方法 country()
+ 		位置: 类型为Student的变量 A
+		*/
+
+		Student B=new Student();
+		System.out.println(B.country);//还可以写成System.out.println(Student.country)；
+		
+		Student C=new Student();
+		C.print();
+	}
+}
+
+class Student{
+	String name;//name是成员变量
+	int age;//实例变量（非静态的成员变量），对象被new出来之后才存在的变量，才能被调用
+	static String country;//静态变量（类变量），对象没有被new出来之前就能调用
+	public void print(){
+		String AA="hello";//AA是局部变量
+		System.out.println(country);
+	}
+}
