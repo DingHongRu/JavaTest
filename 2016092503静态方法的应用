@@ -1,0 +1,57 @@
+public class ArryOperate{
+	public static int max(int[] arr){
+		int max=arr[0];
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]>max){
+				max=arr[i];
+			}
+		}
+		return max;
+	}
+	public static int min(int[] arr){
+		int min=arr[0];
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]<min){
+				min=arr[i];
+			}
+		}
+		return min;
+	}
+	public static void maopaoSort(int[] arr){//冒泡法排序
+		for(int i=0;i<(arr.length-1);i++){
+			for(int j=0;j<(arr.length-1);j++){
+				replace(arr,j,j+1);
+			}
+		}
+		ArryPrint(arr);//自己想的
+	}
+	public static void xuanzeSort(int[] arr){
+		for(int i=0;i<arr.length-1;i++){
+			for(int j=i+1;j<arr.length;j++){
+				replace(arr,i,j);
+			}
+		}
+		ArryPrint(arr);//自己想的
+	}
+	public static void replace(int[] arr,int a,int b){
+		if(arr[a]>arr[b]){
+			int t=arr[a];
+			arr[a]=arr[b];
+			arr[b]=t;
+		}
+	}
+	public static void ArryPrint(int[] arr){//输出数组，自己想的，哈哈哈
+		for(int i=0;i<arr.length;i++){
+			System.out.print("\t"+arr[i]);//一不小心将arr[i]放到""里面了
+		}
+	}
+}
+
+/*
+ArryOperate.java:34: 错误: 方法声明无效; 需要返回类型
+        public static replace(int[] arr,int a,int b){
+                      ^
+ArryOperate.java:41: 错误: 方法声明无效; 需要返回类型
+        public static ArryPrint(int[] arr){
+                      ^
+*/
