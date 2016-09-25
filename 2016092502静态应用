@@ -1,0 +1,12 @@
+/*
+		静态应用工具
+每一个应用程序都有共性功能，可以将这些功能进行抽取，独立封装后以使复用
+对象的作用：对象是用来封装数据的，只要这个类里面有非静态的成员时，那么对象就必须存在，因为对象用来封装非静态的数据。
+*/
+public class A6_39{
+	public static void main(String[] agrs){
+		int[] arr={89,2,67,86,34,90};
+		System.out.println(ArryOperate.max(arr));
+		ArryOperate.xuanzeSort(arr);
+	}
+}
