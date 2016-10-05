@@ -1,0 +1,76 @@
+/*
+java文档注释 文档标识符
+
+*/
+/**
+此类是对数组进行取最值，排序等操作
+@author jiji
+@version 1.0
+*/
+public class ArrayOperate{
+	private ArrayOperate(){}
+	/**
+	取int数组里面最大值
+	@param arr 传入一个int数组
+	@return 返回一个int数值
+	*/
+	public static int max(int[] arr){
+		int max=arr[0];
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]>max){
+				max=arr[i];
+			}
+		}
+		return max;
+	}
+	/**
+	取int数组里面最小值
+	@param arr 传入一个int数组
+	@return 返回一个int数值
+	*/
+	public static int min(int[] arr){
+		int min=arr[0];
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]<min){
+				min=arr[i];
+			}
+		}
+		return min;
+	}
+	/**
+	对传入的int数组进行排序
+	@param arr 传入一个int数组
+	*/
+	public static void maopaoSort(int[] arr){//冒泡法排序
+		for(int i=0;i<(arr.length-1);i++){
+			for(int j=0;j<(arr.length-1);j++){
+				replace(arr,j,j+1);
+			}
+		}
+		ArrayPrint(arr);
+	}
+	/**
+	对传入的int数组进行排序
+	@param arr 传入一个int数组
+	*/
+	public static void xuanzeSort(int[] arr){
+		for(int i=0;i<arr.length-1;i++){
+			for(int j=i+1;j<arr.length;j++){
+				replace(arr,i,j);
+			}
+		}
+		ArrayPrint(arr);
+	}
+	private static void replace(int[] arr,int a,int b){
+		if(arr[a]>arr[b]){
+			int t=arr[a];
+			arr[a]=arr[b];
+			arr[b]=t;
+		}
+	}
+	public static void ArrayPrint(int[] arr){
+		for(int i=0;i<arr.length;i++){
+			System.out.print("\t"+arr[i]);//一不小心将arr[i]放到""里面了
+		}
+	}
+}
