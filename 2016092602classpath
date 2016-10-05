@@ -1,0 +1,6 @@
+/*
+classpath
+path:主要功能是设置JDK的可执行命令
+classpath:主要是在执行时起作用，告诉JVM 类（.class）的所保存的路径
+可以在电脑属性的高级设置的环境变量里新建系统变量（比如，变量名：classpath;变量值：.;E:\Javaproject）
+*/
