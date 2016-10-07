@@ -1,0 +1,37 @@
+/*
+在对子类对象进行初始化的时候，父类的构造方法也会运行，
+因为子类的构造函数
+默认第一行
+都有一条隐式的语句 super();
+（调用父类构造的方法必须写在第一行）
+
+父类的构造方法执行完成之后再执行本类的构造方法。
+先有爸爸，才有儿子。
+*/
+class fu{
+	String name;
+	fu(){
+		System.out.println("父类构造方法");
+	}
+	fu(String n){
+		this.name=n;
+		System.out.println("父类有参构造犯法");
+	}
+}
+class zi extends fu{
+	zi(){
+		super();
+		System.out.println("子类构造方法");
+	}
+	zi(String n){
+		super("jiji");
+		this.name="koko";
+		System.out.println("子类有参构造方法");
+	}
+}
+public class A6_49{
+	public static void main(String[] args){
+		zi n=new zi();
+		zi z=new zi("koko");
+	}
+}
